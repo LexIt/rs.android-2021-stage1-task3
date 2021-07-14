@@ -12,8 +12,10 @@ class Combinator {
         val src_C = array[0]
         val n = array[1]
 
+        if(src_C<0 || n<=0) return null
+
         for(i in 1..n){
-            var C = fact(n)/fact(i)/fact(n-i)
+            val C = fact(n)/fact(i)/fact(n-i)
             if(src_C <= C) {
                 if(res_K == null)
                 {
